@@ -9,6 +9,10 @@ func Loc(s string) *Category {
 	return LocScoped(Root, s)
 }
 
+func (c *Category) String() string {
+	return c.Name
+}
+
 func LocScoped(c *Category, s string) *Category {
 	if c.Name == s {
 		return c
